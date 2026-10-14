@@ -1,10 +1,91 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rajasthan Art & Craft — Admin</title><link rel="stylesheet" href="style.css"></head><body style="background:#151513;color:#fff"><div style="max-width:900px;margin:auto;padding:40px 7vw"><a href="index.html" style="color:#e0c47e">← Back to website</a><p class="eyebrow" style="margin-top:50px">ADMIN AREA</p><h1 style="font-family:'Playfair Display';font-size:48px">Manage your collection</h1><p style="color:#aaa;line-height:1.8">This page is the management interface for the next database connection. Product and price editing can be connected to Supabase so changes become visible to every customer. For security, no password or secret key is stored in this website.</p><div style="background:#201f1b;border:1px solid #3a362d;padding:25px;margin-top:30px"><h2 style="font-family:'Playfair Display'">Planned controls</h2><ul style="color:#bbb;line-height:2"><li>Add / edit / remove products</li><li>Upload multiple product photos</li><li>India, Saudi Arabia, UAE and USA prices</li><li>Mark products featured / active</li><li>View customer enquiries</li><li>Secure email/password login through Supabase</li></ul></div><p style="color:#777;margin-top:30px">The public website works independently with its built-in catalogue. Connect the database before using this page for real business management.</p></div></body></html>
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rajasthan Art & Craft — Admin</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin Sign In | Rajasthan Art And Craft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-:root{color-scheme:dark}
+body{min-height:100vh;background:#191815;color:#f8f4ec;display:grid;grid-template-rows:auto 1fr auto}.admin-top{padding:18px 5vw;border-bottom:1px solid #38342d;display:flex;justify-content:space-between;align-items:center}.admin-top a{color:#e0c47e;font-size:12px}.admin-wrap{width:min(520px,90vw);margin:auto;padding:60px 0}.admin-card{background:#24221d;border:1px solid #403a30;padding:clamp(25px,5vw,45px)}.admin-card h1{font:700 48px/1 var(--serif);margin:15px 0}.admin-card>p{color:#c4bcae;font-size:13px;line-height:1.8}.field{display:grid;gap:8px;margin-top:18px}.field label{font-size:11px;color:#e0d5c0}.field input{width:100%;padding:14px;border:1px solid #51493b;background:#171613;color:#fff;font:inherit}.field input:focus{outline:2px solid #c8a15b;outline-offset:1px}.admin-submit{width:100%;margin-top:22px;border:0;background:#c8a15b;color:#171613;padding:14px;font-weight:700;cursor:pointer}.admin-submit:disabled{opacity:.6;cursor:wait}.notice{display:none;margin-top:16px;padding:12px;font-size:12px;line-height:1.6;background:#302a20;color:#f0d8a5;overflow-wrap:anywhere}.notice.show{display:block}.notice.error{background:#392321;color:#ffd2cc}.dashboard{display:none}.dashboard.show{display:block}.status-list{margin:24px 0;padding:0;list-style:none;border-top:1px solid #403a30}.status-list li{padding:13px 0;border-bottom:1px solid #403a30;font-size:12px;color:#d4cbbb}.muted{font-size:11px!important;color:#999184!important}.admin-footer{text-align:center;padding:20px;color:#8e877b;font-size:10px}
+</style>
+</head>
+<body>
+<header class="admin-top"><a class="brand" href="index.html"><span class="brand-mark">R</span><span><strong>RAJASTHAN</strong><small>ART AND CRAFT</small></span></a><a href="index.html">← Return to website</a></header>
+<main class="admin-wrap">
+<section class="admin-card" id="loginPanel">
+<div class="section-kicker">PRIVATE AREA</div>
+<h1>Admin sign in</h1>
+<p>Sign in with the administrator account created in your Supabase project. This page does not create an account or store your password in the website files.</p>
+<form id="loginForm">
+<div class="field"><label for="email">Administrator email</label><input id="email" name="email" type="email" autocomplete="username" required></div>
+<div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required></div>
+<button class="admin-submit" id="loginButton" type="submit">Sign in securely</button>
+</form>
+<div class="notice" id="loginNotice" role="status" aria-live="polite"></div>
+<p class="muted">For security, never share your password or add a Supabase service-role/secret key to this page.</p>
+</section>
+<section class="admin-card dashboard" id="dashboardPanel">
+<div class="section-kicker">AUTHENTICATED SESSION</div><h1>Welcome</h1>
+<p id="signedInAs"></p>
+<ul class="status-list"><li>✓ Supabase sign-in completed for this session.</li><li>Product editing, image uploads, country-wise pricing and enquiries are not yet connected to a verified database schema.</li></ul>
+<p class="muted">Do not use this page as a finished product manager until database permissions and an administrator-only policy have been configured and tested.</p>
+<button class="admin-submit" id="logoutButton" type="button">Sign out</button>
+<div class="notice" id="dashboardNotice" role="status" aria-live="polite"></div>
+</section>
+</main>
+<footer class="admin-footer">Rajasthan Art And Craft · Since 2000</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>
+(function(){
+  const form=document.getElementById('loginForm');
+  const button=document.getElementById('loginButton');
+  const loginPanel=document.getElementById('loginPanel');
+  const dashboard=document.getElementById('dashboardPanel');
+  const notice=document.getElementById('loginNotice');
+  const dashboardNotice=document.getElementById('dashboardNotice');
+  let client=null;
+  function showNotice(el,message,isError){el.textContent=message;el.className='notice show'+(isError?' error':'');}
+  function showDashboard(user){loginPanel.style.display='none';dashboard.classList.add('show');document.getElementById('signedInAs').textContent='Signed in as '+(user.email||'authenticated user')+'.';}
+  function showLogin(){dashboard.classList.remove('show');loginPanel.style.display='block';}
+  async function init(){
+    if(!window.supabase||!window.RAC_SUPABASE_URL||!window.RAC_SUPABASE_PUBLISHABLE_KEY){
+      showNotice(notice,'Supabase client or public configuration is missing. Check supabase-config.js and the network connection.',true);button.disabled=true;return;
+    }
+    client=window.supabase.createClient(window.RAC_SUPABASE_URL,window.RAC_SUPABASE_PUBLISHABLE_KEY);
+    try{
+      const {data,error}=await client.auth.getSession();
+      if(error) throw error;
+      if(data.session&&data.session.user) showDashboard(data.session.user);
+      client.auth.onAuthStateChange((_event,session)=>{if(session&&session.user)showDashboard(session.user);else showLogin();});
+    }catch(err){showNotice(notice,'Could not check the sign-in session. Please refresh and try again.',true);}
+  }
+  form.addEventListener('submit',async function(event){
+    event.preventDefault();if(!client)return;
+    button.disabled=true;button.textContent='Signing in…';notice.className='notice';
+    const email=document.getElementById('email').value.trim();
+    const password=document.getElementById('password').value;
+    try{
+      const {data,error}=await client.auth.signInWithPassword({email,password});
+      if(error) throw error;
+      if(!data.user) throw new Error('No authenticated user was returned.');
+      showDashboard(data.user);
+    }catch(err){showNotice(notice,'Sign-in failed. Check your email and password, and confirm that this user exists in Supabase Authentication.',true);}
+    finally{button.disabled=false;button.textContent='Sign in securely';document.getElementById('password').value='';}
+  });
+  document.getElementById('logoutButton').addEventListener('click',async function(){
+    if(!client)return;
+    this.disabled=true;
+    try{const {error}=await client.auth.signOut();if(error)throw error;showLogin();showNotice(notice,'You have been signed out.',false);}
+    catch(err){showNotice(dashboardNotice,'Sign-out failed. Please try again.',true);}
+    finally{this.disabled=false;}
+  });
+  init();
+})();
+</script>
+</body>
+</html>
