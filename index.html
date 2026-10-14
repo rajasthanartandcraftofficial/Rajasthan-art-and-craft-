@@ -1,29 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Rajasthan Art & Craft — handcrafted marble fountains, chess, sculptures and architectural décor from Jaipur, India. Since 2000.">
-<title>Rajasthan Art & Craft | Timeless Marble, Crafted in Jaipur</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rajasthan Art And Craft — manufacturer, exporter and wholesaler of marble fountains, chess sets, sculptures and luxury home decor from Jaipur, Rajasthan, India.">
+<meta name="keywords" content="marble fountains, marble chess, marble sculptures, marble elephants, marble lions, marble horses, Jaipur marble exporter, Rajasthan Art And Craft">
+<meta name="theme-color" content="#11100e">
+<title>Rajasthan Art And Craft | Marble & Luxury Decor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="topbar">HANDCRAFTED IN JAIPUR <span>•</span> SINCE 2000 <span>•</span> WORLDWIDE ENQUIRIES</div>
-<header class="nav"><a class="brand" href="#home"><span class="mark">R</span><span>RAJASTHAN <b>ART & CRAFT</b></span></a><button class="menu" aria-label="menu">☰</button><nav><a href="#collection">Collection</a><a href="#craft">Craftsmanship</a><a href="#export">Export</a><a href="#about">About</a><a href="#contact">Contact</a></nav><button class="navquote" onclick="openQuote()">Request a Quote</button></header>
+<div class="topbar">
+  <div>Manufacturer • Exporter • Wholesaler</div>
+  <div class="toplinks">
+    <a href="mailto:rajasthanartandcraftofficial@gmail.com">Email us</a>
+    <a href="tel:+919458450820">+91 94584 50820</a>
+  </div>
+</div>
+
+<header class="site-header" id="home">
+  <a class="brand" href="#home" aria-label="Rajasthan Art And Craft home">
+    <span class="brand-mark">R</span>
+    <span><strong>RAJASTHAN</strong><small>ART AND CRAFT</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#specialities">Our Specialities</a>
+    <a href="#collections">Collections</a>
+    <a href="#craft">Our Craft</a>
+    <a href="#global">Global</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="header-cta" href="https://wa.me/919458450820?text=Hello%20Rajasthan%20Art%20And%20Craft%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noopener">WhatsApp Enquiry</a>
+</header>
+
 <main>
-<section id="home" class="hero"><img src="assets/fountain-hero.jpg" alt="Handcrafted marble fountain in a luxury garden"><div class="shade"></div><div class="heroCopy"><p class="eyebrow">RAJASTHAN • INDIA</p><h1>Timeless marble.<br><em>Crafted for exceptional spaces.</em></h1><p>Handcrafted fountains, chess sets, sculptures and architectural marble décor from Jaipur — made for homes, hotels, villas and discerning collectors.</p><div class="actions"><a class="goldbtn" href="#collection">Explore Collection</a><button class="linebtn" onclick="openQuote()">International Enquiry</button></div><div class="heroMeta"><span>Since 2000</span><span>Custom Craft</span><span>Worldwide Enquiries</span></div></div></section>
-<section class="intro"><div><p class="eyebrow">THE COLLECTION</p><h2>Marble with a sense of place.</h2></div><p>From monumental garden fountains to statement chess sets and sculptural décor, every piece is created to bring natural stone, proportion and Indian craftsmanship into refined spaces.</p></section>
-<section id="collection" class="collection"><div class="sectionHead"><div><p class="eyebrow">CUSTOMER COLLECTION</p><h2>Signature pieces</h2></div><div class="filters"><button class="active" data-cat="all">All</button><button data-cat="Fountains">Fountains</button><button data-cat="Chess">Chess</button><button data-cat="Sculpture">Sculpture</button><button data-cat="Décor">Décor</button></div></div><div class="grid" id="productGrid"></div></section>
-<section id="craft" class="craft"><div class="craftImg"><img src="assets/marble-fountain-garden.jpg" alt="Marble fountain garden setting"></div><div class="craftCopy"><p class="eyebrow">CRAFTED IN JAIPUR</p><h2>From stone to statement.</h2><p>Rajasthan has a long tradition of working with marble. We bring that heritage into contemporary luxury environments while keeping the character of natural stone visible.</p><div class="stats"><div><strong>2000</strong><span>Established</span></div><div><strong>Custom</strong><span>Dimensions & designs</span></div><div><strong>Global</strong><span>Enquiry ready</span></div></div><button class="darkbtn" onclick="openQuote()">Discuss a Custom Piece</button></div></section>
-<section id="export" class="export"><div><p class="eyebrow">GLOBAL COLLECTION</p><h2>Built for international buyers.</h2><p>We welcome enquiries from importers, architects, interior designers, hospitality groups, luxury residences and collectors. Final international pricing can be quoted according to size, finish, packing and destination.</p><div class="countryPills"><span>🇮🇳 India</span><span>🇸🇦 Saudi Arabia</span><span>🇦🇪 UAE</span><span>🇺🇸 USA</span><span>+ more</span></div></div><img src="assets/marble-lions.jpg" alt="Marble lion sculptures at a luxury villa"></section>
-<section class="lifestyle"><div class="lifeCard"><img src="assets/marble-chess-library.jpg"><div><span>01</span><h3>Private interiors</h3></div></div><div class="lifeCard tall"><img src="assets/marble-pedestals.jpg"><div><span>02</span><h3>Resort & poolside</h3></div></div><div class="lifeCard"><img src="assets/marble-horse.jpg"><div><span>03</span><h3>Statement sculpture</h3></div></div></section>
-<section id="about" class="about"><div class="seal">R<br><small>2000</small></div><div><p class="eyebrow">RAJASTHAN ART & CRAFT</p><h2>A family business with a larger horizon.</h2><p>We are building on a family marble business established in 2000, with a focus on taking Rajasthan craftsmanship to customers beyond India. Our long-term goal is to build a trusted international brand in handcrafted stone and luxury décor.</p></div></section>
-<section id="contact" class="contact"><div><p class="eyebrow">START A CONVERSATION</p><h2>Tell us what you are looking for.</h2><p>For product enquiries, custom sizes, bulk orders or international shipping discussions, contact us directly.</p></div><div class="contactBox"><a href="mailto:rajasthanartandcraftofficial@gmail.com">rajasthanartandcraftofficial@gmail.com</a><a href="https://wa.me/919458450820" target="_blank">WhatsApp +91 94584 50820</a><span>Kanota, Agra Road, Jaipur, Rajasthan, India</span><button class="goldbtn" onclick="openQuote()">Send Enquiry</button></div></section>
+<section class="hero">
+  <div class="hero-image" role="img" aria-label="Marble fountain in a luxury garden"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content reveal">
+    <p class="eyebrow">SINCE 2000 • JAIPUR, INDIA</p>
+    <h1>Marble fountains.<br><em>Marble chess.</em></h1>
+    <p class="hero-copy">Our specialities are statement marble fountains for gardens and architectural spaces, and distinctive marble chess sets for refined interiors and collectors.</p>
+    <div class="hero-actions">
+      <a class="btn btn-light" href="#collections">Explore Collection <span>↗</span></a>
+      <a class="btn btn-outline" href="https://wa.me/919458450820?text=Hello%20Rajasthan%20Art%20And%20Craft%2C%20please%20share%20your%20latest%20collection." target="_blank" rel="noopener">Request a Quote</a>
+    </div>
+    <div class="hero-note"><span class="dot"></span> Specialists in marble fountains & marble chess • Wholesale & export enquiries welcome</div>
+  </div>
+  <div class="scroll-hint">SCROLL <span></span></div>
+</section>
+
+<section class="intro section" id="about">
+  <div class="section-kicker">01 — THE HOUSE</div>
+  <div class="intro-grid">
+    <div class="reveal">
+      <h2>A Rajasthan origin.<br><em>A global ambition.</em></h2>
+    </div>
+    <div class="intro-copy reveal">
+      <p class="lead">Rajasthan Art And Craft is a Jaipur-based manufacturer, exporter and wholesaler specialising in marble fountains and distinctive stone decor.</p>
+      <p>Our collection is designed for spaces where material, scale and detail matter — from entrance statements and gardens to luxury interiors and private collections.</p>
+      <p>We participate in exhibitions across India and are building relationships with international buyers in markets including Saudi Arabia, the UAE, Qatar and the USA.</p>
+      <a class="text-link" href="#contact">Start an enquiry <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="marquee" aria-label="Company capabilities">
+  <div>MARBLE FOUNTAINS</div><span>✦</span><div>SCULPTURES</div><span>✦</span><div>MARBLE CHESS</div><span>✦</span><div>HOME DECOR</div><span>✦</span><div>EXPORT</div><span>✦</span>
+</section>
+
+<section class="specialities section" id="specialities">
+  <div class="section-head reveal">
+    <div><div class="section-kicker">OUR MAIN SPECIALITIES</div><h2>Marble fountains &<br><em>marble chess.</em></h2></div>
+    <p>These are the two product categories we especially want buyers to discover. Explore the available visual designs and contact us for dimensions, quantities and a quotation.</p>
+  </div>
+  <div class="speciality-grid">
+    <article class="speciality-card reveal">
+      <div class="speciality-photo-main"><img src="assets/product-5.jpg" alt="Tiered marble fountain in a landscaped garden" loading="lazy"></div>
+      <div class="speciality-copy"><span>01 / GARDEN & ARCHITECTURAL FEATURE</span><h3>Marble Fountains</h3><p>Statement fountains for gardens, courtyards, villas, hotels and landscape projects.</p><a class="text-link" href="https://wa.me/919458450820?text=Hello%20Rajasthan%20Art%20And%20Craft%2C%20I%20am%20interested%20in%20marble%20fountains.%20Please%20share%20available%20designs%20and%20a%20quotation." target="_blank" rel="noopener">Enquire about fountains →</a></div>
+      <div class="speciality-thumbs"><img src="assets/product-9.jpg" alt="Marble fountain in a garden courtyard" loading="lazy"><img src="assets/product-5.jpg" alt="Tiered marble fountain viewed in a landscaped setting" loading="lazy"></div>
+    </article>
+    <article class="speciality-card reveal">
+      <div class="speciality-photo-main chess-photo"><img src="assets/product-3.jpg" alt="Marble chess set displayed in a warm luxury interior" loading="lazy"></div>
+      <div class="speciality-copy"><span>02 / COLLECTOR & INTERIOR PIECE</span><h3>Marble Chess</h3><p>Decorative marble chess sets for collectors, gifting, premium interiors and retail buyers.</p><a class="text-link" href="https://wa.me/919458450820?text=Hello%20Rajasthan%20Art%20And%20Craft%2C%20I%20am%20interested%20in%20marble%20chess%20sets.%20Please%20share%20available%20designs%20and%20a%20quotation." target="_blank" rel="noopener">Enquire about marble chess →</a></div>
+      <div class="speciality-thumbs chess-thumbs"><img src="assets/product-4.jpg" alt="Marble chess set displayed on a chessboard" loading="lazy"><img src="assets/product-3.jpg" alt="Marble chess set in a refined interior" loading="lazy"></div>
+    </article>
+  </div>
+</section>
+
+<section class="collections section" id="collections">
+  <div class="section-head reveal">
+    <div><div class="section-kicker">02 — COLLECTIONS</div><h2>Designed to be <em>noticed.</em></h2></div>
+    <p>Explore a selection from our current visual collection. For sizes, stone options, quantities and trade pricing, contact us directly.</p>
+  </div>
+  <div class="product-grid">
+    <article class="product-card product-large reveal" data-product="0">
+      <img src="assets/product-5.jpg" alt="Marble fountain in a landscaped garden" loading="lazy">
+      <div class="product-info"><span>01</span><h3>Marble Fountains</h3><p>Garden & architectural focal pieces</p><button>View details ↗</button></div>
+    </article>
+    <article class="product-card reveal" data-product="1">
+      <img src="assets/product-3.jpg" alt="Marble chess set in an interior setting" loading="lazy">
+      <div class="product-info"><span>02</span><h3>Marble Chess</h3><p>Collector-style statement sets</p><button>View details ↗</button></div>
+    </article>
+    <article class="product-card reveal" data-product="2">
+      <img src="assets/product-6.jpg" alt="Pair of marble lion sculptures at an entrance" loading="lazy">
+      <div class="product-info"><span>03</span><h3>Marble Lions</h3><p>Entrance & garden sculptures</p><button>View details ↗</button></div>
+    </article>
+    <article class="product-card reveal" data-product="3">
+      <img src="assets/product-1.jpg" alt="Pair of marble elephant sculptures outside a modern home" loading="lazy">
+      <div class="product-info"><span>04</span><h3>Marble Elephants</h3><p>Architectural & decorative pairs</p><button>View details ↗</button></div>
+    </article>
+    <article class="product-card reveal" data-product="4">
+      <img src="assets/product-7.jpg" alt="Marble horse sculpture displayed in a refined interior" loading="lazy">
+      <div class="product-info"><span>05</span><h3>Marble Horse Sculpture</h3><p>Interior statement decor</p><button>View details ↗</button></div>
+    </article>
+    <article class="product-card product-wide reveal" data-product="5">
+      <img src="assets/product-10.jpg" alt="Decorative elephant sculptures in a luxury interior" loading="lazy">
+      <div class="product-info"><span>06</span><h3>Decorative Elephant Sculptures</h3><p>Colour, character & handcrafted detail</p><button>View details ↗</button></div>
+    </article>
+  </div>
+</section>
+
+<section class="feature section" id="craft">
+  <div class="feature-image reveal"><img src="assets/product-9.jpg" alt="Marble fountain in a landscaped luxury garden" loading="lazy"></div>
+  <div class="feature-copy reveal">
+    <div class="section-kicker">03 — OUR CRAFT</div>
+    <h2>Made for architecture,<br><em>not just decoration.</em></h2>
+    <p>Our marble pieces are selected and presented for real spaces: gardens, entrances, living rooms, hospitality settings and statement interiors.</p>
+    <div class="quality-list">
+      <div><b>01</b><span><strong>Material-led design</strong><small>Marble forms chosen to complement refined architecture.</small></span></div>
+      <div><b>02</b><span><strong>Statement scale</strong><small>From tabletop pieces to large entrance and garden sculptures.</small></span></div>
+      <div><b>03</b><span><strong>Trade focused</strong><small>Wholesale and export enquiries are welcome for suitable requirements.</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery section">
+  <div class="section-head reveal">
+    <div><div class="section-kicker">04 — IN CONTEXT</div><h2>Luxury, <em>in place.</em></h2></div>
+    <p>Visual references showing how statement stone and decorative pieces can transform residential and hospitality environments.</p>
+  </div>
+  <div class="gallery-grid">
+    <img class="g1 reveal" src="assets/product-5.jpg" alt="Tiered marble fountain in a landscaped garden" loading="lazy">
+    <img class="g2 reveal" src="assets/product-3.jpg" alt="Marble chess set in a sophisticated interior" loading="lazy">
+    <img class="g3 reveal" src="assets/product-9.jpg" alt="Marble fountain in a garden courtyard" loading="lazy">
+    <img class="g4 reveal" src="assets/product-4.jpg" alt="Marble chess set displayed on a chessboard" loading="lazy">
+    <img class="g5 reveal" src="assets/product-1.jpg" alt="Pair of marble elephant sculptures outside a modern home" loading="lazy">
+  </div>
+</section>
+
+<section class="exhibition section">
+  <div class="exhibition-inner reveal">
+    <div class="section-kicker">05 — INDIA TO THE WORLD</div>
+    <h2>Meet us at exhibitions<br><em>across India.</em></h2>
+    <p>We participate in exhibitions across India, giving buyers and trade visitors opportunities to view products and discuss requirements in person.</p>
+    <a class="btn btn-dark" href="#contact">Ask about upcoming exhibitions</a>
+  </div>
+</section>
+
+<section class="global section" id="global">
+  <div class="section-head reveal">
+    <div><div class="section-kicker">06 — GLOBAL ENQUIRIES</div><h2>From Jaipur to<br><em>international spaces.</em></h2></div>
+    <p>We are developing export relationships with buyers, importers, architects, interior designers, hospitality businesses and luxury home-decor retailers.</p>
+  </div>
+  <div class="markets">
+    <div class="market reveal"><span>01</span><h3>Saudi Arabia</h3><p>Luxury residences, landscape and hospitality</p></div>
+    <div class="market reveal"><span>02</span><h3>UAE</h3><p>High-end interiors and architectural decor</p></div>
+    <div class="market reveal"><span>03</span><h3>Qatar</h3><p>Residential and hospitality projects</p></div>
+    <div class="market reveal"><span>04</span><h3>USA</h3><p>Design-led retail and private spaces</p></div>
+    <div class="market reveal"><span>05</span><h3>Other Markets</h3><p>Open to suitable international enquiries</p></div>
+  </div>
+</section>
+
+<section class="contact section" id="contact">
+  <div class="contact-card reveal">
+    <div class="contact-main">
+      <div class="section-kicker">07 — CONTACT</div>
+      <h2>Have a project<br>in mind?</h2>
+      <p>Tell us what you are looking for — product type, approximate size, quantity and destination. We will respond with the relevant details.</p>
+      <div class="contact-actions">
+        <a class="btn btn-light" href="https://wa.me/919458450820?text=Hello%20Rajasthan%20Art%20And%20Craft%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp us ↗</a>
+        <a class="btn btn-outline-light" href="mailto:rajasthanartandcraftofficial@gmail.com">Email us</a>
+      </div>
+    </div>
+    <div class="contact-details">
+      <div><span>PHONE / WHATSAPP</span><a href="tel:+919458450820">+91 94584 50820</a></div>
+      <div><span>EMAIL</span><a href="mailto:rajasthanartandcraftofficial@gmail.com">rajasthanartandcraftofficial@gmail.com</a></div>
+      <div><span>INSTAGRAM</span><a href="https://instagram.com/rajasthan_art_and_craft" target="_blank" rel="noopener">@rajasthan_art_and_craft</a></div>
+      <div><span>LOCATION</span><p>Kanota Agra Road,<br>Jaipur, Rajasthan 303012, India</p></div>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="brand foot"><span class="mark">R</span><span>RAJASTHAN <b>ART & CRAFT</b></span></div><p>Handcrafted marble elegance from Jaipur, India.</p><div><a href="#collection">Collection</a><a href="#export">Export</a><a href="#contact">Contact</a><a href="admin.html">Admin</a></div><small>© 2026 Rajasthan Art & Craft. All rights reserved.</small></footer>
-<div class="wa"><a href="https://wa.me/919458450820" target="_blank">WhatsApp</a></div>
-<div class="modal" id="productModal"><div class="modalPanel"><button class="close" onclick="closeModal('productModal')">×</button><div id="productDetail"></div></div></div>
-<div class="modal" id="quoteModal"><div class="quotePanel"><button class="close" onclick="closeModal('quoteModal')">×</button><p class="eyebrow">INTERNATIONAL ENQUIRY</p><h2>Request a quote</h2><p>Tell us the product, quantity and destination. We'll contact you directly.</p><form id="quoteForm"><input required name="name" placeholder="Your name"><input required name="country" placeholder="Country"><input name="product" placeholder="Product / collection"><input name="quantity" placeholder="Quantity"><textarea required name="message" placeholder="Message, size or requirements"></textarea><button class="goldbtn" type="submit">Send via Email</button></form><p class="tiny">Or email: rajasthanartandcraftofficial@gmail.com</p></div></div>
-<script src="app.js"></script>
-</body></html>
+
+<footer>
+  <div class="footer-brand"><span class="brand-mark">R</span><div><strong>RAJASTHAN ART AND CRAFT</strong><small>MARBLE • ART • DECOR</small></div></div>
+  <p>© <span id="year"></span> Rajasthan Art And Craft. Since 2000.</p>
+  <div class="footer-links"><a href="#home">Back to top ↑</a><a href="https://instagram.com/rajasthan_art_and_craft" target="_blank" rel="noopener">Instagram</a><a href="mailto:rajasthanartandcraftofficial@gmail.com">Email</a></div>
+</footer>
+
+<div class="floating-wa"><a href="https://wa.me/919458450820?text=Hello%20Rajasthan%20Art%20And%20Craft%2C%20I%20would%20like%20to%20enquire%20about%20your%20collection." target="_blank" rel="noopener" aria-label="WhatsApp">WA</a></div>
+
+<div class="modal" id="productModal" aria-hidden="true">
+  <div class="modal-backdrop" aria-label="Close product details"></div>
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <button class="modal-close" aria-label="Close">×</button>
+    <div class="modal-image"><img id="modalImg" src="" alt=""></div>
+    <div class="modal-copy">
+      <div class="section-kicker" id="modalNumber"></div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalText"></p>
+      <div class="modal-note">Price and availability are shared on request. Tell us your required size, quantity and destination.</div>
+      <a class="btn btn-dark" id="modalWhatsApp" href="#" target="_blank" rel="noopener">WhatsApp Enquiry ↗</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
